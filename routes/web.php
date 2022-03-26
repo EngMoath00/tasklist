@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Route::get('/', function () {
-//     return "WElcome Eng moath this is web site";
+//     return "Welcome Eng moath this is web site";
 // });
 
 Route::get('/about', function () {
@@ -26,7 +26,20 @@ Route::get('/about', function () {
     // return view('aboutdata', compact('name', 'age'));
     // return view('aboutdata')->with('name',$name)->with('age',$age);
 
+    $tasks = ['1' => 'task1', '2' => 'task2', '3' => 'task3'];
+
+    // $tasks = ['task1', 'task2', 'task3'];
+    return view('aboutdata', compact('tasks'));
 });
+
+Route::get('/task/{id}', function ($id) {
+    $tasks = ['1' => 'task1', '2' => 'task2', '3' => 'task3'];
+    // $tasks = ['task1', 'task2', 'task3'];
+
+    $task = $tasks[$id];
+
+    return view('task', compact('task'));
+})->name('taskId');
 
 
 //Route Parameters
