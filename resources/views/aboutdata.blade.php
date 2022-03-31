@@ -11,13 +11,14 @@
 <body>
     {{-- <p>welcome, {{ $name }}</p>
     <p>your age is : {{ $age }}</p> --}}
-
-    @foreach ($tasks as $index => $task)
+    {{-- @foreach ($tasks as $index => $task)
         <ul>
             {{-- <li><a href="/task/{{ $index }}">{{ $task }}</a></li> --}}
-            <li><a href="{{ route('taskId', $index) }}">{{ $task }}</a></li>
-        </ul>
-    @endforeach
+    <li><a href="{{ route('taskId', $index) }}">{{ $task }}</a></li>
+    </ul>
+    @endforeach --}}
+
+    {{-- Welcome, {{ $name }} --}}
 </body>
 
 </html>

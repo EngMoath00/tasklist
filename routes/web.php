@@ -13,13 +13,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return "Welcome Eng moath this is web site";
+Route::get('/', function () {
+    return "Welcome Eng moath this is web site";
+});
+
+// Route::get('/contact', function () {
+//     return view("contact_us");
 // });
 
+// Route::post('/contact', function () {
+//     $name = $_POST['name'];
+//     return view("contact_us", compact('name'));
+// });
+
+// Route::post('/about', function () {
+//     $name = $_POST['name'];
+//     return view("aboutdata", compact('name'));
+// });
+
+
 Route::get('/about', function () {
-    $name = 'moath mohammed';
-    $age = 23;
+    // $name = 'moath mohammed';
+    // $age = 23;
 
     //3 ways to send data from database or aother to view via router
     // return view('aboutdata', ['name' => $name, 'age' => $age]);
@@ -44,10 +59,10 @@ Route::get('/task/{id}', function ($id) {
 
 //Route Parameters
 //1- Required Parameters
-Route::get('/product/{id}', function ($id) {
+// Route::get('/product/{id}', function ($id) {
 
-    return 'product No:' . $id;
-})->name('productId');
+//     return 'product No:' . $id;
+// })->name('productId');
 
 //2- Optional Parameters
 // Route::get('/product/{id?}', function ($id = 0) {
